@@ -1,0 +1,29 @@
+---
+title: "Activity2.1"
+output: html_document
+date: "2023-05-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "centre")
+```
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+# Learning to Reference Figures
+
+```{r FigureActivity2}
+x = seq(1:100) 
+y = rnorm(100) 
+dat = data.frame(x, y) 
+ggplot(dat, aes(x = x, y = y)) + 
+  geom_line() + 
+  labs(caption = "This is Random Noise")
+```
+
+Above is a figure \@ref(FigureActivity2) that shows random noise. 
+
+# Learning to Reference Tables 
+

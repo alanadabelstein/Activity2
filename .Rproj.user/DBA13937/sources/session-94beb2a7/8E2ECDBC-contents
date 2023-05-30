@@ -1,0 +1,38 @@
+---
+title: "Activity2_1"
+output: bookdown::html_book
+date: "2023-05-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "centre")
+```
+
+```{r, include=FALSE}
+library(tidyverse)
+library(kableExtra)
+library(bookdown)
+```
+
+# Learning to Reference Figures
+
+```{r FigureActivity2}
+x = seq(1:100) 
+y = rnorm(100) 
+dat = data.frame(x, y) 
+ggplot(dat, aes(x = x, y = y)) + 
+  geom_line() + 
+  labs(caption = "This is Random Noise")
+```
+
+Above is a figure \@ref(FigureActivity2) that shows random noise. 
+
+# Learning to Reference Tables 
+
+```{r table1}
+kable(head(dat, 5)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+Above is a table \@ref(FigureActivity2) showing the first 5 data points. 
+
