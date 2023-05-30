@@ -1,0 +1,17 @@
+---
+title: "Activity2"
+output: html_document
+date: "2023-05-30"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(fig.align = "center")
+```
+
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+# Learning to reference figures
+
