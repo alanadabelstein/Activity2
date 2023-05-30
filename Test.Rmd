@@ -1,6 +1,12 @@
 ---
-title: "Activity2.1"
+title: "Test"
+author: "Alana Dabelstein"
+date: "2023-05-30"
 output: html_document
+---
+---
+title: "Activity2_1"
+output: bookdown::html_book
 date: "2023-05-30"
 ---
 
@@ -10,6 +16,8 @@ knitr::opts_chunk$set(fig.align = "centre")
 
 ```{r, include=FALSE}
 library(tidyverse)
+library(kableExtra)
+library(bookdown)
 ```
 
 # Learning to Reference Figures
@@ -26,4 +34,11 @@ ggplot(dat, aes(x = x, y = y)) +
 Above is a figure \@ref(FigureActivity2) that shows random noise. 
 
 # Learning to Reference Tables 
+
+```{r table1}
+kable(head(dat, 5)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+Above is a table \@ref(FigureActivity2) showing the first 5 data points. 
 
